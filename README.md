@@ -36,7 +36,9 @@ foo@bar:~$ python /path/to/enroll_speakers.py --delete speaker_name
 ```
 
 ### Ros Speaker Verification
-Add the users name in config/users_list.yaml for which the application has to accessed. To run the speaker verification node, launch the voice_launch.launch file.
+Do following modifications and run the launch file voice_launch.launch file.
++ Add the users name in config/users_list.yaml for which the application has to accessed.
++ Add the wit.ai access token in src/speaker_verification.py.
 
 
 ## References
