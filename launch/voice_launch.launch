@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+    <node pkg="voice_analysis" type="listener.py" name="audio_listener" output='screen'/>
+    <node pkg="voice_analysis" type="speaker_verification.py" name="sv_node" output='screen'/>
+    
+</launch>

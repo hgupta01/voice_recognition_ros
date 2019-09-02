@@ -1,0 +1,28 @@
+#!/usr/bin/python
+
+from pyaudio import paInt16
+
+# Signal processing
+SAMPLE_RATE = 16000
+PREEMPHASIS_ALPHA = 0.97
+FRAME_LEN = 0.025
+FRAME_STEP = 0.01
+NUM_FFT = 512
+BUCKET_STEP = 1
+MAX_SEC = 10
+
+# Model
+WEIGHTS_FILE = "data/model/weights.h5"
+COST_METRIC = "cosine"  # euclidean or cosine
+INPUT_SHAPE=(NUM_FFT,None,1)
+
+
+# Recording
+SHORT_NORMALIZE = (1.0/32768.0)
+chunk = 1024
+FORMAT = paInt16
+CHANNELS = 1
+swidth = 2
+Threshold = 40
+
+TIMEOUT_LENGTH = 2
