@@ -113,12 +113,14 @@ class Recorder:
                 self.record(input)
 
     def initiate_shutdown(self):
-	self.stream.close()
+        print('recorder shut down initiated')
+        self.stream.close()
         self.p.terminate()
+
 
 if __name__ == '__main__':
     rospy.init_node('audio_listener')
     record_noise()
     record = Recorder()
     record.listen()
-    rospy.on_shutdown(record.initiate_shutdown())
+    rospy.on_shutdown(record.initiate_shutdown)
