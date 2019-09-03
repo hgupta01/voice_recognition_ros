@@ -121,4 +121,4 @@ if __name__ == '__main__':
     record_noise()
     record = Recorder()
     record.listen()
-    rospy.on_shutdown(record.inittiate_shutdown())
+    rospy.on_shutdown(record.initiate_shutdown())
