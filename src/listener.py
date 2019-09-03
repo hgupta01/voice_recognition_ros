@@ -25,7 +25,7 @@ FORMAT = pyaudio.paInt16
 CHANNELS = 1
 RATE = 16000
 swidth = 2
-TIMEOUT_LENGTH = 3
+TIMEOUT_LENGTH = 1
 
 
 def record_noise():
@@ -112,9 +112,13 @@ class Recorder:
             if rms_val > Threshold:
                 self.record(input)
 
+    def initiate_shutdown(self):
+	self.stream.close()
+        self.p.terminate()
 
 if __name__ == '__main__':
     rospy.init_node('audio_listener')
     record_noise()
     record = Recorder()
     record.listen()
+    rospy.on_shutdown(record.inittiate_shutdown())
