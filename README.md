@@ -45,4 +45,4 @@ Do following modifications and run the launch file voice_launch.launch file.
 This package contains code and data from other github users and Stackoverflow answers which are mentioned below
 1. The voice recorder used in this project is taken from a [Stackeoverflow](https://stackoverflow.com/questions/18406570/python-record-audio-on-detected-sound) answer written by user Primusa.
 2. Noice removal: the denoise.py script used in this package for noise removal has been written by [Tim Sainburg](https://timsainburg.com/noise-reduction-python.html).
-3. The VVGVOX keras model used for creating speaker embedding is trained by [Linh Vu](https://github.com/linhdvu14/vggvox-speaker-identification) and used here.
+3. The VGGVOX keras model used for creating speaker embedding is trained by [Linh Vu](https://github.com/linhdvu14/vggvox-speaker-identification) and used here.
